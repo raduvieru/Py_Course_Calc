@@ -5,6 +5,21 @@ def Addition(x, y):
 def Subtraction(x, y):
     return x - y
 
+def Multiplication(x, y):
+    pass
+
+def Division(x, y):
+    pass
+
+def FloorDivision(x, y):
+    pass
+
+def Modulus(x, y):
+    pass
+
+def Exponent(x, y):
+    pass
+
 
 while True:
     op = input('Calculator. Press operation key:\n"+" - Addition\n"-" - Subtraction\n"*" - Multiplication\n"/" - Division\n"//" - Floor Division\n"%" - Modulus\n"**" - Exponent\n...or any other key for break operation\n')
