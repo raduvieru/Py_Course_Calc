@@ -27,8 +27,13 @@ while True:
     if op not in operators:
         break
     print("Input values for:")
-    a = int(input("A = "))
-    b = int(input("B = "))
+    try:
+        a = int(input("A = "))
+        b = int(input("B = "))
+    except:
+        print("Sorry, invalid number!!!")
+        input()
+        continue
     if op == '+':
         print("A + B = ", Addition(a, b))
         input()
