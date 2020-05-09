@@ -1,27 +1,37 @@
-def summary(x, y):
+def Addition(x, y):
     return x + y
 
 
-def decrement(x, y):
+def Subtraction(x, y):
     return x - y
 
 
 while True:
-    op = input('Calculator. Press operation key:\n"+" - Addition\n"-" - Subtraction\n"*" - Multiplication\n"/" - Division\n"//" - Floor Division\n"%" - Modulus\n"**" - Exponent\n...or any other character for break operation\n')
-    operators = ['+','-','/','//','%','**']
+    op = input('Calculator. Press operation key:\n"+" - Addition\n"-" - Subtraction\n"*" - Multiplication\n"/" - Division\n"//" - Floor Division\n"%" - Modulus\n"**" - Exponent\n...or any other key for break operation\n')
+    operators = ['+', '-', '*', '/', '//', '%', '**']
     if op not in operators:
         break
     print("Input values for:")
     a = int(input("A = "))
     b = int(input("B = "))
     if op == '+':
-        print("A + B = ", summary(a, b))
+        print("A + B = ", Addition(a, b))
+        input()
     elif op == '-':
-        print("A - B = ", decrement(a, b))
+        print("A - B = ", Subtraction(a, b))
+        input()
+    elif op == '*':
+        print("A * B =")
+        input()
     elif op == '/':
         print("A / B =")
+        input()
     elif op == '//':
         print("A / B =")
-
-
-
+        input()
+    elif op == '%':
+        print("A % B =")
+        input()
+    elif op == '**':
+        print("A ** B =")
+        input()
