@@ -1,25 +1,29 @@
-def Addition(x, y):
+def addition(x, y):
     return x + y
 
 
-def Subtraction(x, y):
+def subtraction(x, y):
     return x - y
 
-def Multiplication(x, y):
+
+def multiplication(x, y):
     pass
 
-def Division(x, y):
+
+def division(x, y):
     pass
 
-def FloorDivision(x, y):
+
+def floordivision(x, y):
     pass
 
-def Modulus(x, y):
+
+def modulus(x, y):
     pass
 
-def Exponent(x, y):
-    pass
 
+def exponent(x, y):
+    pass
 
 while True:
     op = input('Calculator. Press operation key:\n"+" - Addition\n"-" - Subtraction\n"*" - Multiplication\n"/" - Division\n"//" - Floor Division\n"%" - Modulus\n"**" - Exponent\n...or any other key for break operation\n')
@@ -35,10 +39,10 @@ while True:
         input()
         continue
     if op == '+':
-        print("A + B = ", Addition(a, b))
+        print("A + B = ", addition(a, b))
         input()
     elif op == '-':
-        print("A - B = ", Subtraction(a, b))
+        print("A - B = ", subtraction(a, b))
         input()
     elif op == '*':
         print("A * B =")
