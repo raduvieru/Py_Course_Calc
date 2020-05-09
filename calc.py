@@ -5,25 +5,33 @@ def addition(x, y):
 def subtraction(x, y):
     return x - y
 
+def Multiplication(x, y):
+    return x * y
 
-def multiplication(x, y):
-    pass
+def Division(x, y):
+    try:
+        div = x / y
+        return div
+    except:
+        return print("Division by zero - error!")
 
+def FloorDivision(x, y):
+    try:
+        div = x // y
+        return div
+    except:
+        return print("Division by zero - error!")
 
-def division(x, y):
-    pass
+def Modulus(x, y):
+    try:
+        div = x % y
+        return div
+    except:
+        return print("Division by zero - error!")
 
+def Exponent(x, y):
+    return x ** y
 
-def floordivision(x, y):
-    pass
-
-
-def modulus(x, y):
-    pass
-
-
-def exponent(x, y):
-    pass
 
 while True:
     op = input('Calculator. Press operation key:\n"+" - Addition\n"-" - Subtraction\n"*" - Multiplication\n"/" - Division\n"//" - Floor Division\n"%" - Modulus\n"**" - Exponent\n...or any other key for break operation\n')
@@ -48,14 +56,14 @@ while True:
         print("A * B =")
         input()
     elif op == '/':
-        print("A / B =")
+        print("A / B =", Division(a,b))
         input()
     elif op == '//':
-        print("A / B =")
+        print("A / B =",FloorDivision(a,b))
         input()
     elif op == '%':
-        print("A % B =")
+        print("A % B =",Modulus(a,b))
         input()
     elif op == '**':
-        print("A ** B =")
+        print("A ** B =",Exponent(a,b))
         input()
