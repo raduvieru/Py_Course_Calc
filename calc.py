@@ -5,36 +5,43 @@ def addition(x, y):
 def subtraction(x, y):
     return x - y
 
-def Multiplication(x, y):
+
+def multiplication(x, y):
     return x * y
 
-def Division(x, y):
+
+def division(x, y):
     try:
         div = x / y
         return div
-    except:
-        return print("Division by zero - error!")
+    except Exception as exc:
+        return print("Error - ", exc)
 
-def FloorDivision(x, y):
+
+def floor_div(x, y):
     try:
         div = x // y
         return div
-    except:
-        return print("Division by zero - error!")
+    except Exception as exc:
+        return print("Error - ", exc)
 
-def Modulus(x, y):
+
+def modulus(x, y):
     try:
         div = x % y
         return div
-    except:
-        return print("Division by zero - error!")
+    except Exception as exc:
+        return print("Error - ", exc)
 
-def Exponent(x, y):
+
+def exponent(x, y):
     return x ** y
 
 
 while True:
-    op = input('Calculator. Press operation key:\n"+" - Addition\n"-" - Subtraction\n"*" - Multiplication\n"/" - Division\n"//" - Floor Division\n"%" - Modulus\n"**" - Exponent\n...or any other key for break operation\n')
+    op = input('Calculator. Press operation key:\n"+" - Addition\n"-" - Subtraction\n"*" - Multiplication\n"/" - '
+               'Division\n"//" - Floor Division\n"%" - Modulus\n"**" - Exponent\n...or any other key for break '
+               'operation\n')
     operators = ['+', '-', '*', '/', '//', '%', '**']
     if op not in operators:
         break
@@ -42,8 +49,8 @@ while True:
     try:
         a = int(input("A = "))
         b = int(input("B = "))
-    except:
-        print("Sorry, invalid number!!!")
+    except Exception as e:
+        print("Error - ", e)
         input()
         continue
     if op == '+':
@@ -53,17 +60,17 @@ while True:
         print("A - B = ", subtraction(a, b))
         input()
     elif op == '*':
-        print("A * B =")
+        print("A * B =", multiplication(a,b))
         input()
     elif op == '/':
-        print("A / B =", Division(a,b))
+        print("A / B =", division(a, b))
         input()
     elif op == '//':
-        print("A / B =",FloorDivision(a,b))
+        print("A // B =", floor_div(a, b))
         input()
     elif op == '%':
-        print("A % B =",Modulus(a,b))
+        print("A % B =", modulus(a, b))
         input()
     elif op == '**':
-        print("A ** B =",Exponent(a,b))
+        print("A ** B =", exponent(a, b))
         input()
